@@ -1,10 +1,12 @@
 import Announce from '../Announce'
+import earthIcon from '../../assets/earth.svg'
+import image1 from '../../assets/1.webp'
 
 import './styles.sass'
 
 export default function TopAnnounce() {
   return (
-    <Announce width="viewport" image="src/assets/1.webp">
+    <Announce width="viewport" image={image1}>
       <div className="container layout">
         <div className="announce-content announce-top">
           <h1 className="title">
@@ -16,7 +18,7 @@ export default function TopAnnounce() {
           <button className="button button-primary">Learn more</button>
         </div>
 
-        <img src="src/assets/earth.svg" alt="earth" />
+        <img src={earthIcon} alt="earth" />
       </div>
     </Announce>
   )

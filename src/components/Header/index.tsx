@@ -1,10 +1,13 @@
 import './styles.sass'
 
+import headerIcon from '../../assets/headerIcon.svg'
+import busketIcon from '../../assets/busket.svg'
+
 export default function Header() {
   return (
     <header className="header-container">
       <div className="layout header">
-        <img src="src/assets/headerIcon.svg" alt="Header Icon" />
+        <img src={headerIcon} alt="Header Icon" />
         <ul className="navbar">
           <li className="navbar-item">
             <a href="/">Home</a>
@@ -14,7 +17,7 @@ export default function Header() {
           </li>
           <li className="navbar-item">
             <a href="/">
-              <img src="src/assets/busket.svg" />
+              <img src={busketIcon} />
             </a>
           </li>
         </ul>
