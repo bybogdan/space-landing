@@ -1,0 +1,40 @@
+
+@use '../../variables'
+
+.header-container
+  padding: 24px 0
+  background: variables.$secondary-background-color
+
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.navbar
+  display: flex
+  align-items: center
+  gap: 40px
+  list-style: none
+
+@mixin gradient-text($gradient)
+  background: $gradient
+  -webkit-background-clip: text
+  background-clip: text
+  -webkit-text-fill-color: transparent
+  color: variables.$secondary-text-color
+
+.navbar-item
+  font-family: variables.$font-lato-bold
+  font-weight: variables.$font-weight-lato-bold
+  font-size: 18px
+  line-height: 22px
+  color: variables.$primary-text-color
+  text-decoration: none
+  cursor: pointer
+  transition: all 0.2s ease
+
+  &:hover
+    @include gradient-text(linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%))
+
+    svg
+      fill: blue

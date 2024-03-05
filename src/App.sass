@@ -1,0 +1,27 @@
+@use 'variables'
+
+body
+  background-color: variables.$primary-background-color
+  margin: 0
+  padding: 0
+  overscroll-behavior: none
+  color: variables.$primary-text-color
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
+  margin: 0
+  padding: 0
+
+ul, ol
+  list-style: none
+
+a
+  text-decoration: none
+  color: inherit
+
+.layout
+  max-width: 1248px
+  margin: 0 auto
+  padding: 0 30px
+
+  @media  (max-width: variables.$size-m)
+    padding: 0 20px
