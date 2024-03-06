@@ -29,6 +29,6 @@ npm -v: 10.2.3
 ```bash
 npm install
 npm run start
-
-http://localhost:4173
 ```
+
+[`http://localhost:4173`](http://localhost:4173)
