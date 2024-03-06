@@ -9,8 +9,8 @@
 - Images path are incorrect on build version ✅
 - Fix busket color
 - Fix cards: grid view align items
-- Add button to text block and create open close text
-- Add footer
+- Add button to text block and create open close text ✅
+- Add footer ✅
 - Check and make responsive
 - Add burger menu without JS
 - Add hover effects

@@ -1,4 +1,5 @@
 import './App.sass'
+import Footer from './components/Footer'
 
 import Header from './components/Header'
 import MainBlock from './components/MainBlock'
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <TopAnnounce />
       <MainBlock />
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,77 @@
+@use '../../variables'
+
+.about
+  display: flex
+  flex-direction: column
+  position: relative
+  padding-bottom: 40px
+
+  .title
+    font-family: variables.$font-lato-extra-bold
+    font-weight: variables.$font-weight-lato-extra-bold
+    font-size: 32px
+    line-height: 38px
+    color: variables.$primary-text-color
+
+    @media (max-width: variables.$size-m)
+      font-size: 24px
+      line-height: 28px
+
+    @media (max-width: variables.$size-s)
+      font-size: 16px
+      line-height: 22px
+      padding-bottom: 20px
+
+  .text
+    color: variables.$secondary-text-color
+    font-family: variables.$font-lato-bold
+    font-weight: variables.$font-weight-lato-bold
+    font-size: 20px
+    line-height: 24px
+
+  .button
+    position: absolute
+    bottom: 0px
+    left: 0
+    font-family: variables.$font-lato-extra-bold
+    font-weight: variables.$font-weight-lato-extra-bold
+    border: none
+    color: variables.$primary-button-color
+    font-size: 20px
+    line-height: 24px
+    transition: all 0.3s ease
+    background: variables.$transparent-background-color
+    width: fit-content
+    padding: 0
+    cursor: pointer
+
+    &::after
+      content: 'Read more'
+      display: block
+
+    &:hover
+      opacity: 0.6
+
+  .read-more-state:checked ~ .button::after
+    content: 'Show less'
+
+  .extra-content
+    max-height: 0
+    opacity: 0
+    visibility: hidden
+    overflow: hidden
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0s linear 0.5s
+
+  .read-more-state:checked ~ .extra-content
+    opacity: 1
+    max-height: 1000px
+    visibility: visible
+    transition: opacity 0.5s ease, max-height 0.5s ease
+
+  @media (max-width: variables.$size-m)
+    font-size: 16px
+    line-height: 20px
+
+  @media (max-width: variables.$size-s)
+    font-size: 14px
+    line-height: 18px

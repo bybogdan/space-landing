@@ -11,20 +11,31 @@
 .full, .half
   border-radius: 10px
 
-.full
-  width: 100%
+// .full
+//   width: 100%
 
-  @media (max-width: 987px)
-    width: 40%
+//   @media (max-width: 987px)
+//     width: 40%
 
-  @meida (max-width: variables.$size-s)
-    width: 100%
+//   @meida (max-width: variables.$size-s)
+//     width: 100%
 
 .half
-  width: 40%
+  // width: 40%
 
-  @media (max-width: variables.$size-s)
-    width: 100%
+  .announce-content
+
+    .title
+      font-size: 46px
+      line-height: 46px
+      max-width: 300px
+
+    .text
+      font-size: 24px
+      line-height: 28px
+
+  // @media (max-width: variables.$size-s)
+  //   width: 100%
 
 .announce-container::before
   content: ""
