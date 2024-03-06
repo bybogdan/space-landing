@@ -10,7 +10,9 @@ export default function Header() {
   return (
     <header className="header-container">
       <div className="layout header">
-        <img src={headerIcon} alt="Header Icon" />
+        <a href="/">
+          <img src={headerIcon} alt="Header Icon" />
+        </a>
 
         <ul className="navbar">
           <li className="navbar-item">
