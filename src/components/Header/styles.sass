@@ -15,6 +15,8 @@
   align-items: center
   gap: 40px
   list-style: none
+  @media (max-width: variables.$size-m)
+    display: none
 
 @mixin gradient-text($gradient)
   background: $gradient
@@ -36,5 +38,54 @@
   &:hover
     @include gradient-text(linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%))
 
-    svg
-      fill: blue
+.navbar-item-busket
+  .busket-icon
+    display: block
+  .busket-gradient-icon
+    display: none
+
+  &:hover
+    .busket-gradient-icon
+      display: block
+    .busket-icon
+      display: none
+
+// mobile menu
+.menu-toggle:checked ~ .navbar-overlay
+  display: flex
+
+.navbar-trigger-mobile
+  display: none
+  cursor: pointer
+
+  @media (max-width: variables.$size-m)
+    display: block
+
+.navbar-overlay
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 1)
+  z-index: 1
+  justify-content: center
+  align-items: center
+
+  &-close
+    position: absolute
+    top: 20px
+    right: 20px
+    cursor: pointer
+
+  .navbar-mobile
+    list-style-type: none
+    display: flex
+    flex-direction: column
+
+    gap: 30px
+
+    .navbar-item
+      font-size: 28px
+      line-height: 34px

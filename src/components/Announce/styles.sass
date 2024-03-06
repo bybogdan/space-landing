@@ -1,130 +1,113 @@
-@use '../..//variables'
+@use '../../variables'
 
 .announce-container
   position: relative
-  padding: 36px
   overflow: hidden
 
-.viewport
-  border-radius: 0
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.52%, rgba(15, 20, 32, 0.79) 99.48%)
+    z-index: -1
 
-.full, .half
-  border-radius: 10px
+.container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+  padding: 60px 20px
 
-// .full
-//   width: 100%
+  @media (max-width: variables.$size-l-min)
+    padding: 100px 20px
 
-//   @media (max-width: 987px)
-//     width: 40%
-
-//   @meida (max-width: variables.$size-s)
-//     width: 100%
-
-.half
-  // width: 40%
-
-  .announce-content
-
-    .title
-      font-size: 46px
-      line-height: 46px
-      max-width: 300px
-
-    .text
-      font-size: 24px
-      line-height: 28px
-
-  // @media (max-width: variables.$size-s)
-  //   width: 100%
-
-.announce-container::before
-  content: ""
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.52%, rgba(15, 20, 32, 0.79) 99.48%)
-  z-index: -1
-
-.background
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  z-index: -2
-  object-fit: cover
-
-.announce-top
-  padding-top: 90px
-  padding-bottom: 110px
+  @media (max-width: variables.$size-m)
+    flex-direction: column-reverse
+    padding: 0 20px 40px
 
 .announce-content
   display: flex
   flex-direction: column
   gap: 22px
-  max-width: variables.$size-l
-  margin: 0 auto
 
-  @media (max-width: 987px)
-    padding-top: 106px
+  @media (max-width: variables.$size-m)
+    align-items: center
 
-  .title
-    font-family: variables.$font-lato-extra-bold
-    font-size: 74px
-    font-weight: variables.$font-weight-lato-extra-bold
-    line-height: 74px
-    letter-spacing: 0em
-    color: variables.$primary-text-color
-    max-width: 680px
+  @media (max-width: variables.$size-s)
+    gap: 16px
 
-    b
-      color: variables.$highlight-primary-text-color
+.title
+  font-family: variables.$font-lato-extra-bold
+  font-weight: variables.$font-weight-lato-extra-bold
+  font-size: 72px
+  line-height: 72px
+  max-width: 600px
 
-    @media (max-width: variables.$size-m)
-      font-size: 40px
-      line-height: 40px
+  @media (max-width: variables.$size-l-min)
+    font-size: 48px
+    line-height: 48px
 
-  .text
-    font-family: variables.$font-lato-bold
-    font-size: 26px
-    font-weight: variables.$font-weight-lato-bold
-    line-height: 31px
-    letter-spacing: 0em
-    color: variables.$primary-text-color
+  @media (max-width: variables.$size-m)
+    font-size: 36px
+    line-height: 36px
+    text-align: center
+    max-width: 400px
 
-    b
-      color: variables.$highlight-secondary-text-color
+  b
+    color: variables.$highlight-primary-text-color
 
-    @media (max-width: variables.$size-m)
-      font-size: 16
-      line-height: 20px
+.text
+  font-family: variables.$font-lato-extra-bold
+  font-weight: variables.$font-weight-lato-extra-bold
+  font-size: 32px
+  line-height: 38px
+  color: variables.$primary-text-color
 
-  .button
-    padding: 14px 40px
-    border-radius: 100px
-    border: 2px solid variables.$primary-button-color
-    gap: 10px
+  @media (max-width: variables.$size-l-min)
     font-size: 22px
     line-height: 26px
-    font-weight: variables.$font-weight-lato-bold
-    width: fit-content
-    transition: all 0.3s ease
-    cursor: pointer
 
-    &:hover
-      opacity: 0.6
+  @media (max-width: variables.$size-m)
+    font-size: 16px
+    line-height: 20px
 
-    @media (max-width: variables.$size-m)
-      padding: 7px 40px
-      font-size: 16px
-      line-height: 20px
+  b
+    color: variables.$highlight-secondary-text-color
 
-  .button-primary
-    background-color: variables.$primary-button-color
-    color: variables.$secondary-button-color
+.button
+  padding: 14px 40px
+  border-radius: 100px
+  border: 2px solid variables.$primary-button-color
+  gap: 10px
+  font-size: 22px
+  line-height: 26px
+  font-weight: variables.$font-weight-lato-bold
+  width: fit-content
+  transition: all 0.3s ease
+  cursor: pointer
+  background-color: variables.$primary-button-color
+  color: variables.$secondary-button-color
 
-  .button-secondary
-    background-color: variables.$transparent-background-color
-    color: variables.$primary-button-color
+  &:hover
+    opacity: 0.6
+
+  @media (max-width: variables.$size-l-min)
+    padding: 7px 40px
+    font-size: 16px
+    line-height: 20px
+
+.earth
+  @media (max-width: variables.$size-l-min)
+    position: absolute
+    right: -100px
+    top: 50%
+    transform: translateY(-50%)
+
+  @media (max-width: variables.$size-m)
+    right: auto
+    top: -60px
+    transform: none
+    position: relative

@@ -3,13 +3,13 @@ import Footer from './components/Footer'
 
 import Header from './components/Header'
 import MainBlock from './components/MainBlock'
-import TopAnnounce from './components/TopAnnounce'
+import Announce from './components/Announce'
 
 function App() {
   return (
     <>
       <Header />
-      <TopAnnounce />
+      <Announce />
       <MainBlock />
       <Footer />
     </>

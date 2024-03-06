@@ -8,7 +8,7 @@
   @media (max-width: variables.$size-m)
     gap: 30px
 
-  .title
+  .offers-title
     font-family: variables.$font-lato-extra-bold
     font-weight: variables.$font-weight-lato-extra-bold
     font-size: 32px
@@ -30,11 +30,12 @@
 
     @media (max-width: variables.$size-m)
       gap: 30px
-      grid-template-columns: repeat(2, 1fr)
-
-    @media (max-width: variables.$size-s)
       grid-template-columns: 1fr
 
-  div
-    &.full
+  li
+    &:nth-child(1),
+    &:nth-child(4)
       grid-column: 1 / -1
+
+      @media (max-width: variables.$size-l-min)
+        grid-column: auto

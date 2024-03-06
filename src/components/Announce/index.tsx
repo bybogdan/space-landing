@@ -1,16 +1,25 @@
+import earthIcon from '../../assets/earth.svg'
+import image1 from '../../assets/1.webp'
+
 import './styles.sass'
 
-type AnnounceProps = {
-  children: React.ReactNode
-  width: 'viewport' | 'full' | 'half'
-  image: string
-}
-
-export default function Announce({ children, image, width }: AnnounceProps) {
+export default function Announce() {
   return (
-    <div className={`announce-container ${width}`}>
-      <img className="background" src={image} alt="bg" />
-      {children}
+    <div className="announce-container">
+      <img className="background" src={image1} alt="bg" />
+      <div className="container layout">
+        <div className="announce-content">
+          <h1 className="title">
+            Discover the vast expanses of <b>space</b>
+          </h1>
+          <p className="text">
+            Where the possibilities are <b>endless!</b>
+          </p>
+          <button className="button button-primary">Learn more</button>
+        </div>
+
+        <img src={earthIcon} className="earth" alt="earth" />
+      </div>
     </div>
   )
 }

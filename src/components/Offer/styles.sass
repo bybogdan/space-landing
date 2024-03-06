@@ -1,0 +1,110 @@
+@use '../..//variables'
+
+.offer-container
+  position: relative
+  padding: 36px
+  overflow: hidden
+  border-radius: 10px
+
+  @media (max-width: variables.$size-l-min)
+    padding: 36px 22px
+
+  &:nth-child(2),
+  &:nth-child(3)
+    .offer-content
+
+      .title
+        font-size: 46px
+        line-height: 46px
+        max-width: 300px
+
+        @media (max-width: variables.$size-l-min)
+          font-size: 40px
+          line-height: 40px
+          max-width: 250px
+
+      .text
+        font-size: 24px
+        line-height: 28px
+
+        @media (max-width: variables.$size-l-min)
+          font-size: 16px
+          line-height: 20px
+
+.offer-container::before
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -0.52%, rgba(15, 20, 32, 0.79) 99.48%)
+  z-index: -1
+
+.background
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: -2
+  object-fit: cover
+
+.offer-content
+  display: flex
+  flex-direction: column
+  gap: 22px
+  max-width: variables.$size-l
+  margin: 0 auto
+
+  @media (max-width: variables.$size-l-min)
+    padding-top: 70px
+
+  .title
+    font-family: variables.$font-lato-extra-bold
+    font-size: 74px
+    font-weight: variables.$font-weight-lato-extra-bold
+    line-height: 74px
+    letter-spacing: 0em
+    color: variables.$primary-text-color
+    max-width: 680px
+    text-align: left
+
+    @media (max-width: variables.$size-l-min)
+      font-size: 40px
+      line-height: 40px
+      max-width: 250px
+
+  .text
+    font-family: variables.$font-lato-bold
+    font-size: 26px
+    font-weight: variables.$font-weight-lato-bold
+    line-height: 31px
+    letter-spacing: 0em
+    color: variables.$primary-text-color
+
+    @media (max-width: variables.$size-l-min)
+      font-size: 16px
+      line-height: 20px
+
+  .button
+    padding: 14px 40px
+    border-radius: 100px
+    border: 2px solid variables.$primary-button-color
+    gap: 10px
+    font-size: 22px
+    line-height: 26px
+    font-weight: variables.$font-weight-lato-bold
+    width: fit-content
+    transition: all 0.3s ease
+    cursor: pointer
+    background-color: variables.$transparent-background-color
+    color: variables.$primary-button-color
+
+    &:hover
+      opacity: 0.6
+
+    @media (max-width: variables.$size-l-min)
+      padding: 7px 40px
+      font-size: 16px
+      line-height: 20px

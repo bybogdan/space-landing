@@ -1,21 +1,21 @@
 import { OFFERS_LIST } from '../../constants'
-import Announce from '../Announce'
+import Offer from '../Offer'
 
 import './styles.sass'
 
 export default function Offers() {
   return (
     <div className="offers">
-      <h2 className="title">Offers</h2>
+      <h2 className="offers-title">Offers</h2>
       <ul className="list">
-        {OFFERS_LIST.map(({ title, text, image, width, buttonText }) => (
-          <Announce key={title} image={image} width={width}>
-            <div className="announce-content">
+        {OFFERS_LIST.map(({ title, text, image, buttonText }) => (
+          <Offer key={title} image={image}>
+            <div className="offer-content">
               <h1 className="title">{title}</h1>
               <p className="text">{text}</p>
-              <button className="button button-secondary">{buttonText}</button>
+              <button className="button">{buttonText}</button>
             </div>
-          </Announce>
+          </Offer>
         ))}
       </ul>
     </div>
