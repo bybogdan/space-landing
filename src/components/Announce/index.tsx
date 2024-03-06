@@ -1,5 +1,5 @@
 import earthIcon from '../../assets/earth.svg'
-import image1 from '../../assets/1.webp'
+import image1 from '../../assets/1.png'
 
 import './styles.sass'
 
