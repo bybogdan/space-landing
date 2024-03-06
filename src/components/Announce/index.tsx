@@ -1,4 +1,4 @@
-// import earthIcon from '../../assets/earth.svg'
+import earthIcon from '../../assets/earth.png'
 import image1 from '../../assets/1.webp'
 
 import './styles.sass'
@@ -18,7 +18,7 @@ export default function Announce() {
           <button className="button button-primary">Learn more</button>
         </div>
 
-        {/* <img src={earthIcon} className="earth" alt="earth" /> */}
+        <img src={earthIcon} className="earth" alt="earth" />
       </div>
     </div>
   )
