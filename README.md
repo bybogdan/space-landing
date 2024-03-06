@@ -17,8 +17,6 @@
 - Add hover effects ✅
 - Fix on hover effect background color shouldn't be kind of transparent
 
-block code to show node version and npm version
-
 ### Versions
 
 ```bash
@@ -30,5 +28,7 @@ npm -v: 10.2.3
 
 ```bash
 npm install
-npm run build && npm run preview
+npm run start
+
+started on http://localhost:3000
 ```
