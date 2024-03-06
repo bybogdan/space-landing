@@ -30,5 +30,5 @@ npm -v: 10.2.3
 npm install
 npm run start
 
-[`started on http://localhost:4173`](http://localhost:4173)
+http://localhost:4173
 ```
